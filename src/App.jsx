@@ -11,8 +11,8 @@ function App() {
       
       <div className=''>  
         <nav className='flex items-center p-4'>
-          <h1 className='text-2xl'>SACS</h1>
-          <ul className='flex gap-4 p-4  mx-auto'>
+          <h1 className='text-2xl font-semibold'>SACS</h1>
+          <ul className='flex gap-4 p-4  ml-auto'>
             
             <li>
               <Link to="/">Home</Link>
@@ -32,13 +32,16 @@ function App() {
           </ul>
         </nav>
 
-        
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+        <div className='p-4'>
+          <Routes>
+            
+            <Route path="/" element={<Home />}/>
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
 
-      </Routes>
+          </Routes>
+        </div>
+       
           
       </div>  );}
 export default App;
