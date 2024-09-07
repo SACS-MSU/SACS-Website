@@ -1,24 +1,30 @@
 
-import './App.css'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import './App.css';
 
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './layout/Home';
+import About from './layout/About';
+import Contact from './layout/Contact';
 
 function App() {
   return (
-    <Router>       <div>
-        <nav>
-          <ul>
+      
+      <div className=''>  
+        <nav className='flex items-center p-4'>
+          <h1 className='text-2xl'>SACS</h1>
+          <ul className='flex gap-4 p-4  mx-auto'>
+            
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About Us</Link>
+              <Link to="/About">About Us</Link>
             </li>
             <li>
-              <Link to="/events">Events</Link>
+              <Link to="/Events">Events</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/Contact">Contact</Link>
             </li>
             <li>
               <Link to="/register">Register</Link>
@@ -26,11 +32,14 @@ function App() {
           </ul>
         </nav>
 
-        <Switch>
+        
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+
+      </Routes>
           
-          
-        </Switch>
-      </div>
-    </Router>  );}
+      </div>  );}
 export default App;
 
