@@ -10,9 +10,9 @@ function App() {
   return (
       
       <div className=''>  
-        <nav className='flex items-center p-4'>
+        <nav className='flex items-center p-2 border-b-2'>
           <h1 className='text-2xl font-semibold'>SACS</h1>
-          <ul className='flex gap-4 p-4  ml-auto'>
+          <ul className='flex gap-4 p-2  ml-auto '>
             
             <li>
               <Link to="/">Home</Link>
