@@ -6,7 +6,7 @@ const Team = () => {
         <p>Our team is comprised of dedicated students who are passionate about computer science and technology. We are committed to providing opportunities for our members to grow and develop their skills.</p>
         
         <h2 className="text-2xl font-semibold">Executive Board</h2>
-        <div className="flex flex-wrap gap-5 h-96 w-full">
+        <div className="flex flex-wrap justify-center gap-5  w-full">
             <Card name='Daniel Oluwarotimi' title='President'/>
             <Card name='Ashley Prayor' title='Vice President'/>
             <Card name='Lenny Uwaeme' title='Webmaster'/>
