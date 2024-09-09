@@ -15,7 +15,7 @@ function App() {
       <div className=''>  
         <NavBar />
 
-        <div className='p-4'>
+        <div className='flex flex-col'>
           <Routes>
             
             <Route path="/" element={<Home />}/>
