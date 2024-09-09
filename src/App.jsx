@@ -5,32 +5,15 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './layout/Home';
 import About from './layout/About';
 import Contact from './layout/Contact';
+import Events from './layout/Events';
+import Team from './layout/Team';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
       
       <div className=''>  
-        <nav className='flex items-center p-2 border-b-2'>
-          <h1 className='text-2xl font-semibold'>SACS</h1>
-          <ul className='flex gap-4 p-2  ml-auto '>
-            
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/About">About Us</Link>
-            </li>
-            <li>
-              <Link to="/Events">Events</Link>
-            </li>
-            <li>
-              <Link to="/Contact">Contact</Link>
-            </li>
-            <li>
-              <Link to="/register">Register</Link>
-            </li>
-          </ul>
-        </nav>
+        <NavBar />
 
         <div className='p-4'>
           <Routes>
@@ -38,6 +21,8 @@ function App() {
             <Route path="/" element={<Home />}/>
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/team" element={<Team />} />
 
           </Routes>
         </div>
