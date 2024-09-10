@@ -4,7 +4,7 @@ const Home = () => {
   const subTitle = "Morgan State's premier computer science organization"
   return (
     <main className="flex flex-col gap-2 p-4  bg-blue-700 text-white">
-      <p className="bg-white p-1 mt-5 text-blue-700 w-14 rounded">SACS</p>
+      <p className="bg-white p-1 mt-5 text-blue-700 w-14 rounded text-center">SACS</p>
       <h1 className=" text-4xl font-semibold">The Society for the Advancement of Computer Science</h1>
       <p>{subTitle}</p>
       <span className="flex flex-row gap-3">

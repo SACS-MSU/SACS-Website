@@ -1,8 +1,8 @@
 
 const Events = () => {
   return (
-    <main className="p-4">
-      <h1>Upcoming Events</h1>
+    <main className=" flex flex-col gap-5 p-4">
+      <h1 className="text-3xl font-bold">Upcoming Events</h1>
       <p>Check out our upcoming events and join us for a great time! Connecting with fellow students</p>
       <div className="flex flex-wrap">
         
