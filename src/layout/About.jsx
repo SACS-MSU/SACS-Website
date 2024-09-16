@@ -1,6 +1,7 @@
 import Button from "../components/Button"
+import { about } from "../Constants"
+const About = ({}) => {
 
-const About = () => {
   return (
     <div>
         

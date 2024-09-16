@@ -12,10 +12,10 @@ import NavBar from './components/NavBar';
 function App() {
   return (
       
-      <div className=''>  
+      <div className={'flex flex-col h-screen'}>  
         <NavBar />
 
-        <div className='flex flex-col'>
+        <div className='flex flex-col  flex-1 overflow-y-auto'>
           <Routes>
             
             <Route path="/" element={<Home />}/>
