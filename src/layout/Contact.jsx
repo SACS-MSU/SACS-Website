@@ -1,5 +1,7 @@
 import { FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faInstagram,faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { socials } from "../Constants"
+import { faUserGroup } from "@fortawesome/free-solid-svg-icons"
 const Contact = () => {
   return (
     <main className="flex flex-col gap-4 p-5">
@@ -16,14 +18,14 @@ const Contact = () => {
       <section className="flex flex-col gap-2">
         <h3 className="text-2xl font-semibold">Connect with us</h3>
         <p>Follow us on social media to stay up-to-date with our events and activities.</p>
-        <span className="flex gap-4">
-          <p><FontAwesomeIcon icon={faInstagram}  className="text-2xl"/> Instagram</p>
-          <p> <FontAwesomeIcon icon={faLinkedin}  className="text-2xl"/> Linkedin</p>
-          
+        <span className="flex gap-4 items-center">
+          <a href={socials.instagram} target="_blank" rel="noopener noreferrer" ><FontAwesomeIcon icon={faInstagram}  className="text-2xl"/> Instagram</a>
+          <a href=""> <FontAwesomeIcon icon={faLinkedin}  className="text-2xl"/> Linkedin</a>
+          <a href={socials.groupMe} target="_blank" rel="noopener noreferrer" ><FontAwesomeIcon icon={faUserGroup} className="text-2xl"/>GroupMe</a>
         </span>
       </section>
 
-      <p className="text-6xl font-semibold mt-auto mx-auto">#SACSSetstheStandard</p>
+      <p className="text-3xl font-semibold mt-auto mx-auto sm:text-6xl">#SACSSetstheStandard</p>
     </main>
   )
 }

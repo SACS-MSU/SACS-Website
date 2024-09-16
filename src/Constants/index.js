@@ -111,12 +111,17 @@ const about = {
     ]
   };
 
+  const socials = {
+    instagram:'https://www.instagram.com/sacs_msu/',
+    groupMe:'https://groupme.com/join_group/85581669/HYtLnscb' 
+  }
 
   
   
   export {
     members,
-    about
+    about,
+    socials
     
   }
   

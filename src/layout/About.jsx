@@ -13,7 +13,7 @@ const About = () => {
         <h2 className="text-2xl font-bold">Goals</h2>
         <ul className="grid grid-cols gap-2 sm:grid-cols-2 md:grid-cols-3" >
           {about.Goals.map((goal, index) => (
-            <li key={index} className="p-2 "><FontAwesomeIcon icon={faStar} className="mr-1"/>{goal}</li>
+            <li key={index} className="p-2 "><FontAwesomeIcon icon={faStar} className="mr-1 text-blue-700"/>{goal}</li>
           ))}
         </ul>
       </div>
