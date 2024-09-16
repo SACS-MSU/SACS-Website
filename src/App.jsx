@@ -12,7 +12,7 @@ import NavBar from './components/NavBar';
 function App() {
   return (
       
-      <div className={'flex flex-col h-screen'}>  
+      <div className={'flex flex-col h-full'}>  
         <NavBar />
 
         <div className='flex flex-col  flex-1 overflow-y-auto'>
