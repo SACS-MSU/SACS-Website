@@ -2,7 +2,7 @@ import Card from "../components/Card"
 import { members } from "../Constants"
 const Team = () => {
   return (
-    <main className="flex flex-col flex-1 gap-4 p-4">
+    <main className="flex flex-col flex-1 gap-4 p-4 bg-gradient-to-br from-blue-50 to-white">
         <h1 className="mt-4 text-3xl font-bold">Meet the team</h1>
         <p>Our team is comprised of dedicated students who are passionate about computer science and technology. We are committed to providing opportunities for our members to grow and develop their skills.</p>
         
