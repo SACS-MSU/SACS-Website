@@ -4,7 +4,7 @@ import { socials } from "../Constants"
 import { faUserGroup } from "@fortawesome/free-solid-svg-icons"
 const Contact = () => {
   return (
-    <main className="flex flex-col gap-4 p-5">
+    <main className="flex flex-col gap-4 p-5 bg-gradient-to-br from-blue-50 to-white flex-1">
       <section className="flex flex-col gap-2">
         <h1 className="text-3xl font-bold">Contact us</h1>
         <p>We&apos;d love to hear from you! Whether you have a question about our organization, want to join us, or just want to say hello, feel free to reach out.</p>
