@@ -6,7 +6,7 @@ const About = () => {
 
   return (
     <main className="flex  flex-1 flex-col gap-5 p-4 bg-gradient-to-br from-blue-50 to-white">
-      <h1 className="text-3xl font-bold mt-5">About Us</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold mt-4">About Us</h1>
       <p>{about.Mission}</p>
       <div className="bg-white p-6 rounded-xl shadow-lg animate-fade-in">
         <h2 className="text-2xl font-bold my-2">Goals</h2>

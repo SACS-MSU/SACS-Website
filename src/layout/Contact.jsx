@@ -6,12 +6,12 @@ const Contact = () => {
   return (
     <main className="flex flex-col gap-4 p-5 bg-gradient-to-br from-blue-50 to-white flex-1">
       <section className="flex flex-col gap-2">
-        <h1 className="text-3xl font-bold">Contact us</h1>
+        <h1 className="text-3xl font-bold sm:text-4xl">Contact us</h1>
         <p>We&apos;d love to hear from you! Whether you have a question about our organization, want to join us, or just want to say hello, feel free to reach out.</p>
-        <p className="flex gap-1">
+        <a className="flex gap-1" href={socials.email} target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
-        E-mail
-        </p>
+        Email
+        </a>
 
       </section>
       
