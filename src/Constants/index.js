@@ -125,12 +125,17 @@ const about = {
     email:'https://mail.google.com/mail/?view=cm&fs=1&to=msu.sacs64@gmail.com'
   }
 
+  const links ={
+    signUp:'https://forms.gle/EdJoZPMs8VqUULTY6',
+  }
+
   
   
   export {
     members,
     about,
-    socials
+    socials,
+    links
     
   }
   

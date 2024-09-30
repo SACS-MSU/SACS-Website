@@ -1,7 +1,7 @@
-import Button from "../components/Button"
+import { LinkButton } from "../components/Button"
 import SecondaryButton from "../components/SecondaryButton"
 // import { ReactComponent as Logo } from "../assets/SACS Logo Bold Text Vertical.svg";
-
+import { links } from "../Constants"
 const Home = () => {
   const subTitle = "Morgan State's premier computer science organization"
   return (
@@ -12,7 +12,7 @@ const Home = () => {
       <p>{subTitle}</p>
       <span className="flex flex-row gap-3">
         <form action="">
-          <Button  text='Become a member'/>
+          <LinkButton text="Become a member" link={links.signUp}/>
         </form>
         
         <SecondaryButton text='Sponsor us'/>

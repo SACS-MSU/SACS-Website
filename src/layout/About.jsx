@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { about } from "../Constants"
+import { links } from "../Constants"
 import { faBullseye } from "@fortawesome/free-solid-svg-icons"
 
 const About = () => {
@@ -23,7 +24,7 @@ const About = () => {
           <p className="text-blue-100 my-4">{about.Vision}</p>
         </div>
         
-        <a className="p-2 bg-white w-28 col-span-1 text-blue-700 rounded-md text-2xl font-semibold text-center">Join us</a>
+        <a className="p-2 bg-white w-28 col-span-1 text-blue-700 rounded-md text-2xl font-semibold text-center" href={links.signUp} target="_blank">Join us</a>
       </div>
     </main>
   )
