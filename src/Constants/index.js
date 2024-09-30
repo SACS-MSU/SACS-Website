@@ -8,7 +8,9 @@ const members = [
       year: "Class of 2025 🎉",
       skills: ["Web Development", "Backend Development", "Data Engineering"],
       interests: ["Working out", "Reading", "Playing the piano", "Playing table tennis"],
-      bio: "Come talk to me about CS, Anime, Books, Music."
+      bio: "Come talk to me about CS, Anime, Books, Music.",
+      linkedIn: "https://www.linkedin.com/in/daniel-oluwarotimi/",
+      gitHb:"https://github.com/Damilola-4th"
     },
     {
       name: "Ashley Pryor",
@@ -17,7 +19,9 @@ const members = [
       year: "Class of 2025",
       skills: ["Front-end engineering", "Researched CLIs", "IDEs", "Computer science education"],
       interests: ["Reading", "Writing", "Broadway musicals", "K-dramas"],
-      bio: "I can help with class registration, job applications, and conference/career fair prep. Feel free to share any recommendations!"
+      bio: "I can help with class registration, job applications, and conference/career fair prep. Feel free to share any recommendations!",
+      linkedIn: "https://www.linkedin.com/in/ashley-s-pryor/",
+      gitHb:""
     },
     {
       name: "Chukwulenyeudo Uwaeme",
@@ -26,7 +30,9 @@ const members = [
       year: "Class of 2025",
       skills: ["Machine Learning", "AI/ML", "UI/UX", "Data Science", "Building innovative applications with sleek UIs"],
       interests: ["Building projects", "AI/ML", "UI/UX", "Data Science"],
-      bio: "Passionate about creating innovative applications with eye-catching UIs."
+      bio: "Passionate about creating innovative applications with eye-catching UIs.",
+      linkedIn: "https://www.linkedin.com/in/lennythecreator/",
+      gitHb:"https://github.com/lennythecreator"
     },
     {
       name: "Krystalyn Douglas",
@@ -35,7 +41,9 @@ const members = [
       year: "Class of 2027",
       skills: ["Aerospace Engineering", "Experimental and unmanned vehicles", "Scholarship search", "Employment and internship opportunities"],
       interests: ["Crocheting", "Lacrosse", "Swimming", "Learning"],
-      bio: "Passionate about Aerospace Engineering and finding scholarship, employment, and internship opportunities."
+      bio: "Passionate about Aerospace Engineering and finding scholarship, employment, and internship opportunities.",
+      linkedIn: "https://www.linkedin.com/in/kdouglas-5b383b200/",
+      gitHb:""
     }
   ];
   
@@ -113,7 +121,12 @@ const about = {
 
   const socials = {
     instagram:'https://www.instagram.com/sacs_msu/',
-    groupMe:'https://groupme.com/join_group/85581669/HYtLnscb' 
+    groupMe:'https://groupme.com/join_group/85581669/HYtLnscb',
+    email:'https://mail.google.com/mail/?view=cm&fs=1&to=msu.sacs64@gmail.com'
+  }
+
+  const links ={
+    signUp:'https://forms.gle/EdJoZPMs8VqUULTY6',
   }
 
   
@@ -121,7 +134,8 @@ const about = {
   export {
     members,
     about,
-    socials
+    socials,
+    links
     
   }
   
