@@ -1,14 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import Button from "../components/Button"
 import { about } from "../Constants"
-import { faLightbulb, faStar } from "@fortawesome/free-regular-svg-icons"
+import { links } from "../Constants"
 import { faBullseye } from "@fortawesome/free-solid-svg-icons"
 
 const About = () => {
 
   return (
     <main className="flex  flex-1 flex-col gap-5 p-4 bg-gradient-to-br from-blue-50 to-white">
-      <h1 className="text-3xl font-bold mt-5">About Us</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold mt-4">About Us</h1>
       <p>{about.Mission}</p>
       <div className="bg-white p-6 rounded-xl shadow-lg animate-fade-in">
         <h2 className="text-2xl font-bold my-2">Goals</h2>
@@ -19,13 +18,13 @@ const About = () => {
         </ul>
       </div>
       
-      <div className="bg-blue-700 flex flex-col gap-4 px-6 py-12 rounded-xl">
+      <div className="bg-blue-700 flex flex-col gap-2 px-6 py-12 rounded-xl">
         <div className="">
           <h2 className="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">Vision</h2>
-          <p className="text-blue-100">{about.Vision}</p>
+          <p className="text-blue-100 my-4">{about.Vision}</p>
         </div>
         
-        <a className="p-2 bg-white w-28 col-span-1 text-blue-700 rounded-md text-2xl font-semibold">Join us</a>
+        <a className="p-2 bg-white w-28 col-span-1 text-blue-700 rounded-md text-2xl font-semibold text-center" href={links.signUp} target="_blank">Join us</a>
       </div>
     </main>
   )

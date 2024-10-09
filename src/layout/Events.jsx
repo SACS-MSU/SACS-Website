@@ -23,7 +23,6 @@ const Events = () => {
           </div>
           
         </div>
-
         
         <div className="event-content-container">
           <div className='event-navbar-container'>
