@@ -1,4 +1,114 @@
+import {
+  //CS Declassified
+  Acing_your_internship,
 
+  SACS_interest_Meeting,
+
+  CS_Declassified,
+  projectIncubator,
+  springFullstack,
+  workshop_series,
+  Acing_your_technical_interview
+} from '../assets'
+
+const events = {
+  'upcoming': [
+    {
+      'Name': 'Acing Your technical Interview',
+      'Event_flyer': Acing_your_technical_interview,
+      'Description': "This event is done in collaboration with the Google in residence in order to help students learn data structers and algorithm while also givine them an opportunity to simulate a live interview environment",
+      'Date': 'Thursdays'
+    }
+
+  ],
+  'all': [
+    {
+      'Name': 'Acing Your technical Interview',
+      'Event_flyer': Acing_your_technical_interview,
+      'Description': "This event is done in collaboration with the Google in residence in order to help students learn data structers and algorithm while also givine them an opportunity to simulate a live interview environment",
+      'Date': 'Thursdays'
+    },
+    {
+      'Name': 'Acing_your_internship',
+      'Event_flyer': Acing_your_internship,
+      'Description': "Event features a series of speakers who successfully completed their internships and received return offers, they share their journey and stories of how they were successful in jobs",
+      'Date': '4/13/2023'
+    },
+    {
+      'Name': 'SACS interest meeting',
+      'Event_flyer': SACS_interest_Meeting,
+      'Description': "A meeting aimed at providing students that are interested in joining SACS more information about the organization",
+      'Date': '9/24/2024'
+    },
+    {
+      'Name': 'CS Declassified',
+      'Event_flyer': CS_Declassified,
+      'Description': "An event geared at uncovering and breaking down Computer Science concepts of 112 and 241",
+      'Date': '2/13/2024'
+    },
+    {
+      'Name': 'Acing your internship',
+      'Event_flyer': projectIncubator,
+      'Description': "Event features a series of speakers who successfully completed their internships and received return offers, they share their journey and stories of how they were successful in jobs",
+      'Date': '4/13/2023'
+    },
+    {
+      'Name': 'Workshop series',
+      'Event_flyer': springFullstack,
+      'Description': "A event geared atgiving students a intro level introduction to full stack development teaching them skills in both front end and backend using ther PERN stack",
+      'Date': '4/13/2023'
+    },
+    {
+      'Name': 'Workshop series',
+      'Event_flyer': workshop_series,
+      'Description': 'Help student gaving introductions in different coding languages and skill sets in Computer Sience (Exp. python, html, css, flask, C++',
+      'Date': '4/13/2023'
+    }
+  ],
+  'guestspeakers': [
+    {
+     'Name': 'Acing_your_internship',
+     'Event_flyer': Acing_your_internship,
+     'Description': "Event features a series of speakers who successfully completed their internships and received return offers, they share their jouney and stories of how they were succeesfully in jobs",
+     'Date': '4/13/2023'
+    },
+  ],
+  'networking': [
+    {
+      'Name': 'SACS interest meeting',
+      'Event_flyer': SACS_interest_Meeting,
+      'Description': "A meeting aimed at provide students mthat are interested in joining SACS more informaton about the organizations",
+      'Date': '9/24/2024'
+     },
+  ],
+  'workshops': [
+    {
+      'Name': 'CS Declassified',
+      'Event_flyer': CS_Declassified,
+      'Description': "A event Geared at uncovering and breaking down Computer science concepts of 112 and 241",
+      'Date': '2/13/2024'
+     },
+     {
+      'Name': 'Acing your internship',
+      'Event_flyer': projectIncubator,
+      'Description': "Event features a series of speakers who successfully completed their internships and received return offers, they share their jouney and stories of how they were succeesfully in jobs",
+      'Date': '4/13/2023'
+     },
+     {
+      'Name': 'Workshop series',
+      'Event_flyer': springFullstack,
+      'Description': "A event geared atgiving students a intro level introduction to full stack development teaching them skills in both front end and backend using ther PERN stack",
+      'Date': '4/13/2023'
+     },
+
+     {
+      'Name': 'Workshop series',
+      'Event_flyer': workshop_series,
+      'Description': 'Help student gaving introductions in different coding languages and skill sets in Computer Sience (Exp. python, html, css, flask, C++',
+      'Date': '4/13/2023'
+     }
+  ]
+}
 
 const members = [
     {
@@ -121,7 +231,8 @@ const about = {
   export {
     members,
     about,
-    socials
+    socials,
+    events
     
   }
   
