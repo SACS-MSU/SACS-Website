@@ -26,6 +26,14 @@ const About = () => {
         
         <a className="p-2 bg-white w-28 col-span-1 text-blue-700 rounded-md text-2xl font-semibold text-center" href={links.signUp} target="_blank">Join us</a>
       </div>
+
+      <div className="flex flex-col h-72 gap-4 p-4 rounded-xl shadow-md border">
+          <h1 className="text-3xl font-bold">Membership Requirements</h1>
+          {about.MembershipRequirements.map((req,index)=>(
+            <li key={index}>{req}</li>
+          ))}
+          
+      </div>
     </main>
   )
 }
