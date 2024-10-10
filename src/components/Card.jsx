@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 const Card = ({name,title,interest,linkedIn,gitHub}) => {
   return (
     <div className="flex flex-col  w-80 sm:w-64 lg:w-80  gap-2 p-4 rounded-md bg-white shadow-md shadow-slate-300">
-        <img src="https://drive.google.com/file/d/1fyxeFRIXL3heSMUG9zK_QGnH4Ld8LqJa/view?usp=sharing" alt="placeholder" className="h-52 w-full rounded aspect-video	"/>
+        <img src="/Placeholder.png" alt="placeholder" className="h-52 w-full rounded aspect-video	"/>
         <h2 className="text-base font-medium">{name}</h2>
         <p className="text-sm">{title}</p>
         <details>
