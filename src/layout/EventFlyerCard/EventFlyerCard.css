@@ -1,0 +1,37 @@
+.FlyerCard {
+    display: flex;
+    flex-direction: column;
+    /* Top Top-right Bottom-right Bottom-left*/
+    margin: 20px 44px 20px 20px;
+    background-color: #f2f7ff;
+    padding: 26px;
+    border-radius: 16px;
+
+}
+
+.FlyerCard-img-container{
+  
+} 
+.event-flyer {
+    height: 400px;
+    border-radius: 20px;
+}
+
+.FlyerCard-content-container{
+    margin-top: 14px;
+    width: 300px;
+    padding-left: 16px;
+    padding-top: 8px;
+}
+.FlyerCard-content-container p {
+    padding-top: 14px;
+    font-weight: 500;
+}
+.eventName {
+    font-weight: bold;
+   
+}
+
+.FlyerCard-content-container span{
+    font-weight: 350;
+}
