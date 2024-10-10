@@ -16,9 +16,9 @@ const Card = ({name,title,interest,linkedIn,gitHub}) => {
           </ul>
         </details>
 
-        <span className="flex gap-2">
-          <a className="text-base" href={linkedIn} target="_blank"><FontAwesomeIcon icon={faLinkedinIn}/></a>
-          <a className="text-base" href={gitHub} target="_blank"><FontAwesomeIcon icon={faGithub}/></a>
+        <span className="flex gap-2 items-center">
+          <a className="text-lag hover:text-blue-500" href={linkedIn} target="_blank"><FontAwesomeIcon icon={faLinkedinIn}/> LinkedIn</a>
+          <a className="text-lg hover:text-blue-500" href={gitHub} target="_blank"><FontAwesomeIcon icon={faGithub}/> GitHub</a>
         </span>
     </div>
   )
