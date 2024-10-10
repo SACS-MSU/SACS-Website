@@ -1,4 +1,4 @@
-const SecondaryButton = ({ text }) => {
+const SecondaryButton = ({ text,link }) => {
   const isHomePage = location.pathname === '/';
   return (
     <button
@@ -6,7 +6,7 @@ const SecondaryButton = ({ text }) => {
         isHomePage ? ' text-white border-white' : ''
       }`}
     >
-      {text}
+      <a href={link} target="_blank">{text}</a>
     </button>
   );
 };

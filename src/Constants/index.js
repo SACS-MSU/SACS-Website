@@ -237,6 +237,7 @@ const about = {
 
   const links ={
     signUp:'https://forms.gle/EdJoZPMs8VqUULTY6',
+    sponsorship: 'https://forms.gle/MSiPLnqEtmmySfA16'
   }
 
   

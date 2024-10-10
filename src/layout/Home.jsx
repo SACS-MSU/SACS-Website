@@ -15,7 +15,7 @@ const Home = () => {
           <LinkButton text="Become a member" link={links.signUp}/>
         </form>
         
-        <SecondaryButton text='Sponsor us'/>
+        <SecondaryButton text='Sponsor us' link={links.sponsorship}/>
       </span>
     </main>
   )
