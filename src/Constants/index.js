@@ -8,11 +8,18 @@ import {
   projectIncubator,
   springFullstack,
   workshop_series,
-  Acing_your_technical_interview
+  Acing_your_technical_interview,
+  SACS_2nd_Interest_Meeting,
 } from '../assets'
 
 const events = {
   'upcoming': [
+    {
+      'Name': 'SACS 2nd Interest Meeting',
+      'Event_flyer': SACS_2nd_Interest_Meeting,
+      'Description': "Come join for our second interest meeting to learn about who we are and what we do",
+      'Date': 'Thursday October 29th'
+    },
     {
       'Name': 'Acing Your technical Interview',
       'Event_flyer': Acing_your_technical_interview,
