@@ -8,7 +8,7 @@ import springFullstack from './Workshops/Spring_fullstack.svg'
 import workshop_series from './Workshops/Workshop_series.svg'
 import Acing_your_technical_interview from './Workshops/Acing_your_technical_interview.svg'
 import SACS_2nd_Interest_Meeting from './Networking/SACS 2nd Interest Meeting.svg'
-
+import Data_Science_Competition_SACS from './Workshops/Data Science Competition SACS.svg'
 
 export {
     //Guest soeakers
@@ -22,6 +22,7 @@ export {
     projectIncubator,
     springFullstack,
     workshop_series,
-    Acing_your_technical_interview
+    Acing_your_technical_interview,
+    Data_Science_Competition_SACS,
 
 }

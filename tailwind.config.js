@@ -10,7 +10,8 @@ module.exports = {
         'md': '768px',  // Medium devices
         'lg': '1024px', // Large devices
         'xl': '1280px', // Extra large devices
-        '2xl': '1536px' // 2x extra large devices
+        '2xl': '1536px', // 2x extra large devices
+        '3xl': '1992px',// 3xl 
       },
     },
   },
