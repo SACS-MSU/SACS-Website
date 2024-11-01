@@ -10,10 +10,18 @@ import {
   workshop_series,
   Acing_your_technical_interview,
   SACS_2nd_Interest_Meeting,
+  Data_Science_Competition_SACS,
 } from '../assets'
 
 const events = {
   'upcoming': [
+    {
+      'Name': 'Data Science Competition and Workshop',
+      'Event_flyer': Data_Science_Competition_SACS,
+      'Description': "Whether you’re looking to sharpen your Python skills, build an impressive résumé, or take home some exciting prizes, we’ve got just the opportunity for you! Join us tomorrow at 1 PM for our Data Science Competition & Workshop.",
+      'Date': 'Wednesdays & Fridays 1-2pm'
+    },
+
     {
       'Name': 'SACS 2nd Interest Meeting',
       'Event_flyer': SACS_2nd_Interest_Meeting,
