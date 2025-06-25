@@ -1,6 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import logoWhite from '../assets/images/sacs-logo-white.png';
+import logo from '../assets/images/sacs-logo.png';
 
 const NavBar = () => {
   const location = useLocation();
@@ -10,10 +13,10 @@ const NavBar = () => {
 
   const navLinks = [
     { to: '/', label: 'Home' },
-    { to: '/About', label: 'About Us' },
+    { to: '/about', label: 'About Us' },
     { to: '/team', label: 'Meet the team' },
-    { to: '/Events', label: 'Events' },
-    { to: '/Contact', label: 'Contact' },
+    { to: '/events', label: 'Events' },
+    { to: '/contact', label: 'Contact' },
   ];
 
   return (
@@ -21,14 +24,23 @@ const NavBar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
-          <h1 className={`text-lg sm:text-2xl font-semibold ${location.pathname === '/' ? 'text-white' : 'text-blue-700'}`}>
-            SACS
-          </h1>
+          <div className="flex items-center gap-2">
+            <img src={location.pathname === '/' ? logoWhite : logo} alt="SACS Logo" className="w-8 h-8 rounded-full p-0.5" />
+            <h1 className={`text-lg sm:text-2xl font-semibold ${location.pathname === '/' ? 'text-white' : 'text-blue-700'}`}>
+              SACS
+            </h1>
+          </div>
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center gap-4 lg:gap-8">
-            {navLinks.map((link) => (
-              <li key={link.to}>
+            {navLinks.map((link, index) => (
+              <motion.li
+                key={link.to}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+                className="relative"
+              >
                 <Link
                   to={link.to}
                   className={`${
@@ -37,7 +49,15 @@ const NavBar = () => {
                 >
                   {link.label}
                 </Link>
-              </li>
+                {location.pathname === link.to && (
+                  <motion.span
+                    layoutId="underline"
+                    className={`absolute -bottom-1 left-0 w-full h-0.5 ${
+                      location.pathname === '/' ? 'bg-blue-200' : 'bg-blue-700'
+                    } border-dashed`}
+                  />
+                )}
+              </motion.li>
             ))}
           </ul>
 

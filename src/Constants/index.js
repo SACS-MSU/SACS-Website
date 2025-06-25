@@ -174,7 +174,7 @@ const members = [
   
 
 const about = {
-    Mission: "Create Network and Job Opportunities, To Engender Mentorship Opportunities, Sharpening the Technical and Professional Skills of Members, Showcasing the diverse and vast talent pool of Morgan State University.",
+    Mission: "We launch Morgan State's top tech talent into the future — by unlocking career-defining opportunities, building powerful mentorship networks, and sharpening the skills that drive innovation, impact, and leadership.",
     
     Goals: [
       "To partner with over 15 different Companies/Organizations to provide Computer Science students at Morgan State University with access to opportunities for growth, development, and career advancement.",
@@ -255,14 +255,73 @@ const about = {
     sponsorship: 'https://forms.gle/MSiPLnqEtmmySfA16'
   }
 
+
+  const qualities = [
+    "Mentorship",
+    "Career Growth",
+    "Technical Workshops",
+    "Community",
+    "Leadership",
+    "Networking",
+    "Diversity",
+  ];
+
+  const conciseGoals = [
+    "Partner with 15+ organizations for career growth.",
+    "Host technical workshops each semester.",
+    "Offer tutoring support for CS courses.",
+    "Help members land impactful career roles.",
+    "Provide scholarships to reduce financial strain.",
+    "Enable mentoring from peers and professionals.",
+  ];
+  
+  const testimonials = [
+    {
+      name: "Jasmine T.",
+      text: "SACS helped me land my first internship and gave me a community to grow with!",
+    },
+    {
+      name: "Malik W.",
+      text: "The workshops and mentorship completely transformed my confidence and skills.",
+    },
+    {
+      name: "Aaliyah R.",
+      text: "I met my tech mentor through SACS and got my dream role after graduation!",
+    },
+  ];
+  
+  const sponsors = ["Kyndryl", "CACI", "Capital One", "Google", "Microsoft"];
+  
+  const faqs = [
+    {
+      question: "How do I become a member of SACS?",
+      answer:
+        "You can become a member by filling out the sign-up form and attending at least three SACS events per semester.",
+    },
+    {
+      question: "Do I need to be a CS major to join?",
+      answer:
+        "No! While we focus on computer science, students from all majors with an interest in tech are welcome.",
+    },
+    {
+      question: "What kind of events does SACS host?",
+      answer:
+        "We host technical workshops, hack nights, speaker series, mentorship meetups, and career development sessions.",
+    },
+  ];
   
   
   export {
+    qualities,
     members,
     about,
     socials,
     events,
-    links
+    links,
+    conciseGoals,
+    faqs,
+    testimonials,
+    sponsors
   }
   
   
