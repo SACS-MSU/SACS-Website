@@ -13,6 +13,25 @@ module.exports = {
         '2xl': '1536px', // 2x extra large devices
         '3xl': '1992px',// 3xl 
       },
+      animation: {
+        marquee: 'marquee 30s linear infinite',
+        accordionDown: 'accordionDown 300ms ease-out',
+    accordionUp: 'accordionUp 300ms ease-out',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        accordionDown: {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        accordionUp: {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
     },
   },
   plugins: [],
