@@ -3,6 +3,7 @@ import SecondaryButton from "../components/SecondaryButton";
 import { links, qualities } from "../Constants";
 import { motion } from "framer-motion";
 import logo from "../assets/images/sacs-logo.png";
+import { Helmet } from "react-helmet";
 
 const gridZones = [
   { top: "5%", left: "55%" },
@@ -21,10 +22,22 @@ const Home = () => {
 
   return (
     <main className="relative min-h-[calc(100vh-4rem)] bg-gradient-to-b from-blue-900 via-blue-700 to-orange-300 text-white overflow-hidden">
+      <Helmet>
+        <title>SACS – Morgan State University Computer Science Club</title>
+        <meta
+          name="description"
+          content="Join SACS, the Society for the Advancement of Computer Science at Morgan State University. We host CS workshops, mentorships, and career-building events."
+        />
+        <meta name="keywords" content="Morgan State University, Computer Science Club, SACS, CS workshops, MSU tech, MSU SACS" />
+        <meta property="og:title" content="SACS – Morgan State CS Club" />
+        <meta property="og:description" content="Your hub for CS events, mentorship, and opportunities at MSU." />
+        <meta property="og:image" content="https://morganstatesacs.org/sacs-logo-vertical.svg" />
+      </Helmet>
+
       {/* Background logo watermark */}
       <img
         src={logo}
-        alt="SACS Logo Watermark"
+        alt="SACS logo – Morgan State University Computer Science Club"
         className="absolute opacity-50 w-96 sm:w-[650px] top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0"
       />
 
