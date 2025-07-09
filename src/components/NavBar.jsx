@@ -13,6 +13,7 @@ const NavBar = () => {
 
   const navLinks = [
     { to: '/', label: 'Home' },
+    { to: '/get-involved', label: 'Get Involved' },
     { to: '/about', label: 'About Us' },
     { to: '/team', label: 'Meet the team' },
     { to: '/events', label: 'Events' },
