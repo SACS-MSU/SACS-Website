@@ -1,10 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { about, links, testimonials, sponsors, conciseGoals, faqs } from "../Constants";
+import {
+  about,
+  links,
+  testimonials,
+  sponsors,
+  conciseGoals,
+  faqs,
+} from "../Constants";
 import { faBullseye, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import * as Accordion from "@radix-ui/react-accordion";
 import banner from "../assets/images/sacs-banner.png";
+import SEO from "../components/SEO";
 
 const ScrollFadeIn = ({ children, delay = 0 }) => {
   const ref = useRef(null);
@@ -23,19 +31,37 @@ const ScrollFadeIn = ({ children, delay = 0 }) => {
 };
 
 const About = () => {
+  const seoPageTitle = "About SACS – Morgan State CS Club";
+  const seoPageDescription =
+    "Discover the mission and vision of SACS, Morgan State University's premier computer science club. Learn about membership, events, and testimonials.";
+  const seoKeywords =
+    "Morgan State, SACS, CS club, computer science, student organization, MSU tech, SACS goals, SACS vision";
+
   return (
     <main className="flex flex-col gap-24 p-6 sm:p-12 bg-gradient-to-tr from-white via-blue-50 to-blue-100">
-      <div
+      <SEO
+        title={seoPageTitle}
+        description={seoPageDescription}
+        keywords={seoKeywords}
+      />
+
+      <header
         className="h-[350px] sm:h-[400px] rounded-xl overflow-hidden shadow-lg bg-cover bg-center"
         style={{
           backgroundImage: `url(${banner})`,
-          backgroundPosition: "center 45%", // shifts image content downward
+          backgroundPosition: "center 45%",
         }}
       />
 
       <ScrollFadeIn>
-        <section className="text-center max-w-4xl mx-auto">
-          <motion.h1 className="text-5xl sm:text-6xl font-extrabold text-blue-900 mb-6 drop-shadow-lg">
+        <section
+          className="text-center max-w-4xl mx-auto"
+          aria-labelledby="about-heading"
+        >
+          <motion.h1
+            id="about-heading"
+            className="text-5xl sm:text-6xl font-extrabold text-blue-900 mb-6 drop-shadow-lg"
+          >
             🚀 About SACS
           </motion.h1>
           <p className="text-xl text-gray-700 leading-relaxed">
@@ -45,9 +71,14 @@ const About = () => {
       </ScrollFadeIn>
 
       <ScrollFadeIn>
-        <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <section
+          className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center"
+          aria-labelledby="goals-heading"
+        >
           <div className="flex flex-col gap-4">
-            <h2 className="text-4xl font-bold text-blue-800">🌟 Our Goals</h2>
+            <h2 id="goals-heading" className="text-4xl font-bold text-blue-800">
+              🌟 Our Goals
+            </h2>
             <p className="text-gray-700 text-lg">
               At SACS, we equip our students to lead, build, and thrive through
               these core goals:
@@ -77,8 +108,14 @@ const About = () => {
       </ScrollFadeIn>
 
       <ScrollFadeIn>
-        <section className="max-w-5xl mx-auto bg-gradient-to-br from-white via-blue-50 to-blue-100 p-10 sm:p-14 rounded-3xl shadow-2xl text-center border border-blue-200">
-          <h2 className="text-4xl font-bold text-blue-800 mb-4">
+        <section
+          className="max-w-5xl mx-auto bg-gradient-to-br from-white via-blue-50 to-blue-100 p-10 sm:p-14 rounded-3xl shadow-2xl text-center border border-blue-200"
+          aria-labelledby="vision-heading"
+        >
+          <h2
+            id="vision-heading"
+            className="text-4xl font-bold text-blue-800 mb-4"
+          >
             🔭 Our Vision
           </h2>
           <p className="text-lg text-gray-700 mb-6">{about.Vision}</p>
@@ -94,8 +131,14 @@ const About = () => {
       </ScrollFadeIn>
 
       <ScrollFadeIn>
-        <section className="max-w-4xl mx-auto bg-white p-10 rounded-3xl shadow-xl border border-blue-100">
-          <h2 className="text-3xl font-bold text-blue-800 mb-4">
+        <section
+          className="max-w-4xl mx-auto bg-white p-10 rounded-3xl shadow-xl border border-blue-100"
+          aria-labelledby="requirements-heading"
+        >
+          <h2
+            id="requirements-heading"
+            className="text-3xl font-bold text-blue-800 mb-4"
+          >
             📝 Membership Requirements
           </h2>
           <ul className="space-y-3 text-gray-700 text-base list-disc list-inside">
@@ -107,8 +150,14 @@ const About = () => {
       </ScrollFadeIn>
 
       <ScrollFadeIn>
-        <section className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-blue-800 mb-6">
+        <section
+          className="max-w-5xl mx-auto text-center"
+          aria-labelledby="testimonials-heading"
+        >
+          <h2
+            id="testimonials-heading"
+            className="text-3xl font-bold text-blue-800 mb-6"
+          >
             💬 Student Testimonials
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -127,8 +176,14 @@ const About = () => {
       </ScrollFadeIn>
 
       <ScrollFadeIn>
-        <section className="max-w-6xl mx-auto py-16 text-center space-y-10 overflow-hidden">
-          <h2 className="text-3xl font-bold text-blue-800">
+        <section
+          className="max-w-6xl mx-auto py-16 text-center space-y-10 overflow-hidden"
+          aria-labelledby="sponsors-heading"
+        >
+          <h2
+            id="sponsors-heading"
+            className="text-3xl font-bold text-blue-800"
+          >
             🤝 Past Partners & Sponsors
           </h2>
           <div className="relative w-full overflow-hidden">
@@ -165,8 +220,14 @@ const About = () => {
       </ScrollFadeIn>
 
       <ScrollFadeIn>
-        <section className="max-w-4xl mx-auto text-left py-10">
-          <h2 className="text-3xl font-bold text-blue-800 mb-6 text-center">
+        <section
+          className="max-w-4xl mx-auto text-left py-10"
+          aria-labelledby="faq-heading"
+        >
+          <h2
+            id="faq-heading"
+            className="text-3xl font-bold text-blue-800 mb-6 text-center"
+          >
             ❓ Frequently Asked Questions
           </h2>
           <Accordion.Root type="multiple" className="space-y-4 w-full">

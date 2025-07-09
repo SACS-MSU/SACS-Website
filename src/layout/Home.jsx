@@ -3,6 +3,7 @@ import SecondaryButton from "../components/SecondaryButton";
 import { links, qualities } from "../Constants";
 import { motion } from "framer-motion";
 import logo from "../assets/images/sacs-logo.png";
+import SEO from "../components/SEO";
 
 const gridZones = [
   { top: "5%", left: "55%" },
@@ -19,12 +20,24 @@ const shuffledZones = [...gridZones].sort(() => Math.random() - 0.5);
 const Home = () => {
   const subTitle = "Morgan State's premier computer science organization";
 
+  const seoPageTitle = "SACS – Morgan State University Computer Science Club";
+  const seoPageDescription =
+    "Join SACS, the Society for the Advancement of Computer Science at Morgan State University. We host CS workshops, mentorships, and career-building events.";
+  const seoKeywords =
+    "Morgan State University, Computer Science Club, SACS, CS workshops, MSU tech, MSU SACS";
+
   return (
     <main className="relative min-h-[calc(100vh-4rem)] bg-gradient-to-b from-blue-900 via-blue-700 to-orange-300 text-white overflow-hidden">
+      <SEO
+        title={seoPageTitle}
+        description={seoPageDescription}
+        keywords={seoKeywords}
+      />
+
       {/* Background logo watermark */}
       <img
         src={logo}
-        alt="SACS Logo Watermark"
+        alt="SACS logo – Morgan State University Computer Science Club"
         className="absolute opacity-50 w-96 sm:w-[650px] top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0"
       />
 
