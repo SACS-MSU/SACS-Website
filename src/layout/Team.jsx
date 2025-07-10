@@ -1,105 +1,85 @@
-import { faUserCircle } from "@fortawesome/free-solid-svg-icons"
-import Card from "../components/Card"
-import { members } from "../Constants"
-import { about } from "../Constants"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import EboardCard from "../components/cards/EboardCard"
+import MemberCard from "../components/cards/MemberCard";
+import { members, currentMembers, links } from "../Constants"
+import { motion } from "framer-motion"
+
+const imagePath = (folder, filename) => `/profile-images/${folder}/${filename}`;
 
 const Team = () => {
   return (
-    <main className="flex flex-col flex-1 gap-8 p-8 bg-gradient-to-br from-blue-50 to-white">
-      <section className="space-y-6">
-        <div>
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4">Meet the Team</h1>
-          <p className="text-gray-600 text-lg leading-relaxed max-w-3xl">
-            Our team is comprised of dedicated students who are passionate about computer science and technology. 
-            We are committed to providing opportunities for our members to grow and develop their skills.
-          </p>
+    <main className="flex flex-col flex-1 gap-14 p-8 bg-gradient-to-br from-blue-50 to-white">
+      {/* Hero Section */}
+      <motion.section 
+        className="text-center"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h1 className="text-4xl font-extrabold text-blue-800 mb-3">Meet the Team</h1>
+        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          Our executive board and general members work together to build a thriving computer science community at Morgan State.
+        </p>
+      </motion.section>
+
+      {/* Executive Board */}
+      <motion.section 
+        className="bg-white p-6 sm:p-8 rounded-xl shadow-md border"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h2 className="text-2xl font-semibold text-blue-700 mb-14">Executive Board</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
+          {members.map((member, index) => (
+            <EboardCard 
+              key={index} 
+              name={member.name} 
+              title={member.title} 
+              interest={member.interests} 
+              linkedIn={member.linkedIn} 
+              funFact={member.funFact}
+              gitHub={member.github}
+              image={imagePath("eboard", member.image)}
+            />
+          ))}
         </div>
-        
-        <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border">
-          <h2 className="text-2xl font-semibold mb-6">Executive Board</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {members.map((member, index) => (
-              <Card 
-                key={index} 
-                name={member.name} 
-                title={member.title} 
-                interest={member.interests} 
-                linkedIn={member.linkedIn} 
-                gitHub={member.gitHb}
-              />
-            ))}
-          </div>
+      </motion.section>
+
+      {/* General Members */}
+      <motion.section 
+        className="bg-white p-6 sm:p-8 rounded-xl shadow-md border"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2 }}
+      >
+        <h2 className="text-2xl font-semibold text-blue-700 mb-6">SACS Members</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        {[...currentMembers]
+  .sort((a, b) => a.name.localeCompare(b.name))
+  .map((member, index) => (
+    <MemberCard 
+      key={index}
+      name={member.name} 
+      image={member.image} 
+      linkedIn={member.linkedIn} 
+    />
+))}
         </div>
-      </section>
+      </motion.section>
 
-      <section className="space-y-6">
-        <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border">
-          <h2 className="text-2xl font-semibold mb-6">E-Board Responsibilities</h2>
-          
-          <div className="space-y-8">
-            <div className="space-y-3">
-              <h3 className="flex items-center gap-2 text-lg font-semibold text-blue-700">
-                <FontAwesomeIcon icon={faUserCircle} className="text-blue-600"/>
-                President
-              </h3>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                {about.OfficersResponsibilities.President.map((responsibility, index) => (
-                  <li key={index}>{responsibility}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="space-y-3">
-              <h3 className="flex items-center gap-2 text-lg font-semibold text-blue-700">
-                <FontAwesomeIcon icon={faUserCircle} className="text-blue-600"/>
-                Vice-President
-              </h3>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                {about.OfficersResponsibilities.VicePresident.map((responsibility, index) => (
-                  <li key={index}>{responsibility}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="space-y-3">
-              <h3 className="flex items-center gap-2 text-lg font-semibold text-blue-700">
-                <FontAwesomeIcon icon={faUserCircle} className="text-blue-600"/>
-                Secretary
-              </h3>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                {about.OfficersResponsibilities.Secretary.map((responsibility, index) => (
-                  <li key={index}>{responsibility}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="space-y-3">
-              <h3 className="flex items-center gap-2 text-lg font-semibold text-blue-700">
-                <FontAwesomeIcon icon={faUserCircle} className="text-blue-600"/>
-                Tech Lead
-              </h3>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                {about.OfficersResponsibilities.TechLead.map((responsibility, index) => (
-                  <li key={index}>{responsibility}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="space-y-3">
-              <h3 className="flex items-center gap-2 text-lg font-semibold text-blue-700">
-                <FontAwesomeIcon icon={faUserCircle} className="text-blue-600"/>
-                Treasurer
-              </h3>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                {about.OfficersResponsibilities.Treasurer.map((responsibility, index) => (
-                  <li key={index}>{responsibility}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Join Section */}
+      <motion.section 
+        className="text-center bg-blue-700 text-white py-12 px-6 rounded-xl"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.4 }}
+      >
+        <h3 className="text-3xl font-bold mb-4">Want to be part of the team?</h3>
+        <p className="mb-6 text-blue-100 max-w-xl mx-auto">
+          We're always looking for new members who are excited about tech, learning, and community. Join us today!
+        </p>
+        <a href={links.signUp} className="inline-block px-6 py-3 bg-white text-blue-700 font-semibold rounded-md shadow hover:shadow-lg transition">Join SACS</a>
+      </motion.section>
     </main>
   )
 }

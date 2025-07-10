@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { links } from "../Constants";
 
 const GetInvolved = () => {
   return (
@@ -29,7 +30,7 @@ const GetInvolved = () => {
           <p className="text-gray-700 mb-4">
             Become a member to gain access to workshops, mentoring, career support, and a vibrant network of CS students.
           </p>
-          <Link to="/signup" className="text-blue-600 hover:underline font-semibold">Become a Member</Link>
+          <Link to={links.signUp} className="text-blue-600 hover:underline font-semibold">Become a Member</Link>
         </div>
 
         <div className="bg-white shadow-md rounded-2xl p-6 border hover:shadow-xl transition">

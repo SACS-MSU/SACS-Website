@@ -1,20 +1,19 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { events } from '../Constants';
 import EventFlyerCard from './EventFlyerCard/EventFlyerCard';
 
 const Events = () => {
-  const [checkNavtabClicked, setCheckNavtabClicked] = useState('upcoming');
-  const [filteredEvent, setFilteredEvent] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('upcoming');
+  const [filteredEvents, setFilteredEvents] = useState([]);
 
   useEffect(() => {
-    setFilteredEvent(events.upcoming);
-    setCheckNavtabClicked('upcoming');
+    setFilteredEvents(events.upcoming);
   }, []);
 
   const handleFilter = (category) => {
-    setFilteredEvent(events[category]);
-    setCheckNavtabClicked(category);
+    setSelectedCategory(category);
+    setFilteredEvents(events[category] || []);
   };
 
   const categories = [
@@ -28,57 +27,63 @@ const Events = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gray-50 px-4 sm:px-6 lg:px-8 py-8">
-      <div className="max-w-7xl mx-auto space-y-8">
-        {/* Header Section */}
-        <div className="space-y-4">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-            Upcoming Events
-          </h1>
-          <p className="text-gray-600 text-sm sm:text-base lg:text-lg max-w-2xl">
-            Check out our upcoming events and join us for a great time! Connecting with fellow students
-          </p>
-        </div>
+    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-white px-6 py-12">
+      <motion.section 
+        className="text-center mb-12"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h1 className="text-5xl font-extrabold text-blue-800 mb-4">Events at SACS</h1>
+        <p className="text-gray-700 text-lg max-w-2xl mx-auto">
+          Explore our range of events designed to educate, connect, and inspire computer science students at Morgan State.
+        </p>
+      </motion.section>
 
-        {/* Navigation Tabs */}
-        <div className="overflow-x-auto -mx-4 sm:mx-0">
-          <nav className="min-w-full inline-flex px-4 sm:px-0">
-            <ul className="flex space-x-2 sm:space-x-4 pb-2">
-              {categories.map((category) => (
-                <li key={category.id}>
-                  <button
-                    onClick={() => handleFilter(category.id)}
-                    className={`whitespace-nowrap px-4 py-2 rounded-full text-sm sm:text-base transition-colors
-                      ${checkNavtabClicked === category.id
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-white text-gray-600 hover:bg-gray-100'
-                      }`}
-                  >
-                    {category.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-
-        {/* Event Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredEvent?.map((event, index) => (
-            <EventFlyerCard key={index} event={event} />
-          ))}
-        </div>
-
-        {/* About Section */}
-        <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm space-y-4">
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
-            About our Events
-          </h2>
-          <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-            At SACS (Society of Advancement in Computer Science), we offer a diverse range of events to support students' growth in Computer Science, whether they are just starting their programming journey, exploring new fields, or gaining insights into the tech industry. Our events provide a holistic experience, from workshops like CS Declassified, which breaks down core computer science concepts, to Acing Your Internship, where successful interns share their experiences and strategies for landing return offers. We also host networking opportunities like the SACS Interest Meeting, ensuring that students have access to both learning and professional growth. SACS is committed to fostering a supportive environment for all students interested in Computer Science.
-          </p>
-        </div>
+      {/* Navigation Tabs */}
+      <div className="flex flex-wrap justify-center gap-3 mb-10">
+        {categories.map((category) => (
+          <button
+            key={category.id}
+            onClick={() => handleFilter(category.id)}
+            className={`px-4 py-2 rounded-full font-medium text-sm shadow-sm transition 
+              ${selectedCategory === category.id 
+                ? 'bg-blue-700 text-white' 
+                : 'bg-white text-blue-700 border border-blue-300 hover:bg-blue-100'}`}
+          >
+            {category.label}
+          </button>
+        ))}
       </div>
+
+      {/* Events Grid */}
+      <motion.section 
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        {filteredEvents?.length ? (
+          filteredEvents.map((event, index) => (
+            <EventFlyerCard key={index} event={event} />
+          ))
+        ) : (
+          <p className="col-span-full text-center text-gray-600 text-lg">No events found for this category.</p>
+        )}
+      </motion.section>
+
+      {/* About Section */}
+      <motion.section 
+        className="mt-20 bg-white rounded-2xl shadow-md p-8 max-w-6xl mx-auto"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2 }}
+      >
+        <h2 className="text-3xl font-bold text-blue-800 mb-4">Why Attend Our Events?</h2>
+        <p className="text-gray-700 text-lg leading-relaxed">
+          SACS events are designed to elevate your computer science journey—whether you're a beginner or an advanced learner. We host interactive workshops, engaging tech talks, networking mixers, and more. Join us to build your skills, connect with peers and industry professionals, and find inspiration for your next big idea.
+        </p>
+      </motion.section>
     </main>
   );
 };

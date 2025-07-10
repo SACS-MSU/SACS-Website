@@ -15,7 +15,7 @@ const NavBar = () => {
     { to: '/', label: 'Home' },
     { to: '/get-involved', label: 'Get Involved' },
     { to: '/about', label: 'About Us' },
-    { to: '/team', label: 'Meet the team' },
+    { to: '/team', label: 'Meet the Team' },
     { to: '/events', label: 'Events' },
     { to: '/contact', label: 'Contact' },
   ];
