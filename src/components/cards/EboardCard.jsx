@@ -4,8 +4,17 @@ import { motion } from "framer-motion"
 
 const EboardCard = ({ name, title, funFact, linkedIn, gitHub, image=null }) => {
   return (
+    
     <motion.div 
-      className="relative bg-white rounded-2xl shadow-lg border p-4 flex flex-col items-center text-center space-y-4"
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          e.currentTarget.click();
+        }
+      }}
+      className="relative bg-white rounded-2xl shadow-lg border p-4 flex flex-col items-center text-center space-y-4 cursor-pointer"
       whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.15)" }}
       whileTap={{ scale: 0.98 }}
       initial={{ opacity: 0, y: 20 }}
@@ -57,6 +66,7 @@ const EboardCard = ({ name, title, funFact, linkedIn, gitHub, image=null }) => {
         )}
       </div>
     </motion.div>
+    
   )
 }
 

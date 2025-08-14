@@ -10,6 +10,7 @@ import Team from './layout/Team';
 import NavBar from './components/NavBar';
 import GetInvolved from './layout/GetInvolved';
 import SponsorshipPage from './layout/Sponsorship';
+import NotFoundPage from './layout/404';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/team" element={<Team />} />
             <Route path="/get-involved" element={<GetInvolved />} />
             <Route path="/sponsorship" element={<SponsorshipPage />} />
+            <Route path="*" element={<NotFoundPage/>} />
 
           </Routes>
         </div>
