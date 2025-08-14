@@ -340,7 +340,7 @@ const about = {
   }
 
   const links ={
-    signUp:'https://forms.gle/EdJoZPMs8VqUULTY6',
+    signUp:'https://forms.gle/t7jUEZ4k3zcpka3v6',
     sponsorship: 'https://forms.gle/MSiPLnqEtmmySfA16'
   }
 
