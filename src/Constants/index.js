@@ -125,56 +125,144 @@ const events = {
   ]
 }
 
-const members = [
-    {
-      name: "Daniel Oluwarotimi",
-      title: "President",
-      major: "Computer Science",
-      year: "Class of 2025 🎉",
-      skills: ["Web Development", "Backend Development", "Data Engineering"],
-      interests: ["Working out", "Reading", "Playing the piano", "Playing table tennis"],
-      bio: "Come talk to me about CS, Anime, Books, Music.",
-      linkedIn: "https://www.linkedin.com/in/daniel-oluwarotimi/",
-      gitHb:"https://github.com/Damilola-4th"
-    },
-    {
-      name: "Ashley Pryor",
-      title: "Vice President",
-      major: "Computer Science",
-      year: "Class of 2025",
-      skills: ["Front-end engineering", "Researched CLIs", "IDEs", "Computer science education"],
-      interests: ["Reading", "Writing", "Broadway musicals", "K-dramas"],
-      bio: "I can help with class registration, job applications, and conference/career fair prep. Feel free to share any recommendations!",
-      linkedIn: "https://www.linkedin.com/in/ashley-s-pryor/",
-      gitHb:""
-    },
-    {
-      name: "Chukwulenyeudo Uwaeme",
-      title: "WebMaster",
-      major: "Computer Science",
-      year: "Class of 2025",
-      skills: ["Machine Learning", "AI/ML", "UI/UX", "Data Science", "Building innovative applications with sleek UIs"],
-      interests: ["Building projects", "AI/ML", "UI/UX", "Data Science"],
-      bio: "Passionate about creating innovative applications with eye-catching UIs.",
-      linkedIn: "https://www.linkedin.com/in/lennythecreator/",
-      gitHb:"https://github.com/lennythecreator"
-    },
-    {
-      name: "Krystalyn Douglas",
-      title: "Secretary",
-      major: "Computer Science / Engineering Physics",
-      year: "Class of 2027",
-      skills: ["Aerospace Engineering", "Experimental and unmanned vehicles", "Scholarship search", "Employment and internship opportunities"],
-      interests: ["Crocheting", "Lacrosse", "Swimming", "Learning"],
-      bio: "Passionate about Aerospace Engineering and finding scholarship, employment, and internship opportunities.",
-      linkedIn: "https://www.linkedin.com/in/kdouglas-5b383b200/",
-      gitHb:""
-    }
-  ];
+const eboard = [
+  {
+    name: "Clyde Tandjong",
+    title: "President",
+    major: "Computer Science",
+    year: "Class of 2025",
+    skills: [],
+    interests: [],
+    bio: "",
+    funFact: "I once built a PC from scratch using spare parts.",
+    linkedIn: "https://www.linkedin.com/in/clyde-tandjong",
+    github: "https://github.com/clydewtt",
+    image: "clyde-tandjong.jpg"
+  },
+  {
+    name: "Mikayla Brown",
+    title: "Vice President",
+    major: "Computer Science",
+    year: "Class of 2025",
+    skills: [],
+    interests: [],
+    bio: "",
+    funFact: "I'm a coffee enthusiast and love coding in cafes.",
+    linkedIn: "https://www.linkedin.com/in/mikayla-brown",
+    github: "",
+    image: "mikayla-brown.jpeg"
+  },
+  {
+    name: "Oluwatobi Olajide",
+    title: "Tech Lead",
+    major: "Computer Science",
+    year: "Class of 2025",
+    skills: [],
+    interests: [],
+    bio: "",
+    funFact: "I built my first app when I was 15.",
+    linkedIn: "https://www.linkedin.com/in/oluwatobi-olajide",
+    github: "",
+    image: "oluwatobi-olajide.jpeg"
+  },
+  {
+    name: "Oluwole Adetife",
+    title: "Tutoring Coordinator",
+    major: "Computer Science",
+    year: "Class of 2025",
+    skills: [],
+    interests: [],
+    bio: "",
+    funFact: "I can solve a Rubik's cube in under a minute.",
+    linkedIn: "https://www.linkedin.com/in/oluwole-adetifa-278586113",
+    github: "",
+    image: "oluwole-adetife.jpeg"
+  },
+  {
+    name: "Elizabeth Stewart",
+    title: "Secretary",
+    major: "Computer Science",
+    year: "Class of 2025",
+    skills: [],
+    interests: [],
+    bio: "",
+    funFact: "I’ve visited over 10 national parks.",
+    linkedIn: "https://www.linkedin.com/in/elizabeth-h-stewart28",
+    github: "",
+    image: "elizabeth-stewart.jpeg"
+  },
+  {
+    name: "Isaiah Simpson",
+    title: "Sponsorship Coordinator",
+    major: "Computer Science",
+    year: "Class of 2025",
+    skills: [],
+    interests: [],
+    bio: "",
+    funFact: "I’m a huge fan of Marvel and know every movie in order.",
+    linkedIn: "https://www.linkedin.com/in/isaiah-simpson-/",
+    github: "",
+    image: "isaiah-simpson.jpeg"
+  },
+  {
+    name: "Destiny Bertier",
+    title: "Volunteering Chair",
+    major: "Computer Science",
+    year: "Class of 2025",
+    skills: [],
+    interests: [],
+    bio: "",
+    funFact: "I enjoy writing poetry in my free time.",
+    linkedIn: "https://www.linkedin.com/in/destinybertier/",
+    github: "",
+    image: "destiny-bertier.jpeg"
+  },
+  {
+    name: "Najae Potts",
+    title: "Webmaster/Social Media Coordinator",
+    major: "Computer Science",
+    year: "Class of 2025",
+    skills: [],
+    interests: [],
+    bio: "",
+    funFact: "I'm a self-taught digital artist as well.",
+    linkedIn: "https://www.linkedin.com/in/najae-potts/",
+    github: "",
+    image: "najae-potts.jpeg"
+  },
+  {
+    name: "Collin Umeh",
+    title: "Treasurer",
+    major: "Computer Science",
+    year: "Class of 2025",
+    skills: [],
+    interests: [],
+    bio: "",
+    funFact: "I love analyzing financial data for fun.",
+    linkedIn: "https://www.linkedin.com/in/collin-umeh17/",
+    github: "",
+    image: "collin-umeh.jpeg"
+  },
+  {
+    name: "Chukwulenyeudo Uwaeme",
+    title: "Elder",
+    major: "Computer Science",
+    year: "Class of 2025",
+    skills: [],
+    interests: [],
+    bio: "",
+    funFact: "I once built a robot that can play chess.",
+    linkedIn: "https://www.linkedin.com/in/lennythecreator/",
+    github: "",
+    image: "chukwulenyeudo-uwaeme.jpeg"
+  }
+];
+
+
   
 
 const about = {
-    Mission: "Create Network and Job Opportunities, To Engender Mentorship Opportunities, Sharpening the Technical and Professional Skills of Members, Showcasing the diverse and vast talent pool of Morgan State University.",
+    Mission: "We launch Morgan State's top tech talent into the future — by unlocking career-defining opportunities, building powerful mentorship networks, and sharpening the skills that drive innovation, impact, and leadership.",
     
     Goals: [
       "To partner with over 15 different Companies/Organizations to provide Computer Science students at Morgan State University with access to opportunities for growth, development, and career advancement.",
@@ -246,6 +334,7 @@ const about = {
 
   const socials = {
     instagram:'https://www.instagram.com/sacs_msu/',
+    linkedIn: "https://www.linkedin.com/company/sacs-msu/",
     groupMe:'https://groupme.com/join_group/85581669/HYtLnscb',
     email:'https://mail.google.com/mail/?view=cm&fs=1&to=msu.sacs64@gmail.com'
   }
@@ -255,14 +344,92 @@ const about = {
     sponsorship: 'https://forms.gle/MSiPLnqEtmmySfA16'
   }
 
+
+  const qualities = [
+    "Mentorship",
+    "Career Growth",
+    "Technical Workshops",
+    "Community",
+    "Leadership",
+    "Networking",
+    "Diversity",
+  ];
+
+  const conciseGoals = [
+    "Partner with 15+ organizations for career growth.",
+    "Host technical workshops each semester.",
+    "Offer tutoring support for CS courses.",
+    "Help members land impactful career roles.",
+    "Provide scholarships to reduce financial strain.",
+    "Enable mentoring from peers and professionals.",
+  ];
+  
+  const testimonials = [
+    {
+      name: "Jasmine T.",
+      text: "SACS helped me land my first internship and gave me a community to grow with!",
+    },
+    {
+      name: "Malik W.",
+      text: "The workshops and mentorship completely transformed my confidence and skills.",
+    },
+    {
+      name: "Aaliyah R.",
+      text: "I met my tech mentor through SACS and got my dream role after graduation!",
+    },
+  ];
+  
+  const sponsors = ["Kyndryl", "CACI", "Capital One", "Google", "Microsoft"];
+  
+  const faqs = [
+    {
+      question: "How do I become a member of SACS?",
+      answer:
+        "You can become a member by filling out the sign-up form and attending at least three SACS events per semester.",
+    },
+    {
+      question: "Do I need to be a CS major to join?",
+      answer:
+        "No! While we focus on computer science, students from all majors with an interest in tech are welcome.",
+    },
+    {
+      question: "What kind of events does SACS host?",
+      answer:
+        "We host technical workshops, hack nights, speaker series, mentorship meetups, and career development sessions.",
+    },
+  ];
+  
+  export const currentMembers = [
+    { name: "Tyon Robinson", image: "tyon-robinson.jpg", linkedIn: "https://www.linkedin.com/in/tyon-robinson/" },
+    { name: "Montay Howard", image: "montay-howard.jpg", linkedIn: "https://www.linkedin.com/in/montay-howard/" },
+    { name: "Amyra Harry", image: "amyra-harry.jpg", linkedIn: "https://www.linkedin.com/in/amyra-harry/" },
+    { name: "Mahki Titus", image: "mahki-titus.jpg", linkedIn: "https://www.linkedin.com/in/mahki-titus/" },
+    { name: "Daniel Onyejiekwe", image: "daniel-onyejiekwe.jpg", linkedIn: "https://www.linkedin.com/in/daniel-onyejiekwe/" },
+    { name: "Arthur Core III", image: "arthur-core-iii.jpg", linkedIn: "https://www.linkedin.com/in/arthur-core-iii/" },
+    { name: "Jeremiah Essilfie", image: "jeremiah-essilfie.jpg", linkedIn: "https://www.linkedin.com/in/jeremiah-essilfie/" },
+    { name: "Iyinoluwa Ayodele", image: "iyinoluwa-ayodele.jpg", linkedIn: "https://www.linkedin.com/in/iyinoluwa-ayodele/" },
+    { name: "Jaunel Panton", image: "jaunel-panton.jpg", linkedIn: "https://www.linkedin.com/in/jaunel-panton/" },
+    { name: "Theodore Hagan", image: "theodore-hagan.jpg", linkedIn: "https://www.linkedin.com/in/theodore-hagan/" },
+    { name: "Etinosa Ogbeide", image: "etinosa-ogbeide.jpg", linkedIn: "https://www.linkedin.com/in/etinosa-ogbeide/" },
+    { name: "Amber Swift-Rose", image: "amber-swift-rose.jpg", linkedIn: "https://www.linkedin.com/in/amber-swift-rose/" },
+    { name: "Joshua Akeredolu", image: "joshua-akeredolu.jpg", linkedIn: "https://www.linkedin.com/in/joshua-akeredolu/" },
+    { name: "Tarique Cummings", image: "tarique-cummings.jpg", linkedIn: "https://www.linkedin.com/in/tarique-cummings/" },
+    { name: "Jason Sampson", image: "jason-sampson.jpg", linkedIn: "https://www.linkedin.com/in/jason-sampson/" },
+  ];
+  
   
   
   export {
-    members,
+    qualities,
+    eboard as members,
     about,
     socials,
     events,
-    links
+    links,
+    conciseGoals,
+    faqs,
+    testimonials,
+    sponsors
   }
   
   

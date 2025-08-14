@@ -8,6 +8,8 @@ import Contact from './layout/Contact';
 import Events from './layout/Events';
 import Team from './layout/Team';
 import NavBar from './components/NavBar';
+import GetInvolved from './layout/GetInvolved';
+import SponsorshipPage from './layout/Sponsorship';
 
 function App() {
   return (
@@ -23,11 +25,11 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/events" element={<Events />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/get-involved" element={<GetInvolved />} />
+            <Route path="/sponsorship" element={<SponsorshipPage />} />
 
           </Routes>
         </div>
        
-          
       </div>  );}
 export default App;
-

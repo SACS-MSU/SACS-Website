@@ -1,75 +1,66 @@
-.FlyerCard {
+.event-card {
     display: flex;
     flex-direction: column;
-    margin: 20px 44px 20px 20px;
-    background-color: #f2f7ff;
-    padding: 26px;
-    border-radius: 16px;
-    height: 100%;
-}
-
-.FlyerCard-img-container {
-    width: 100%;
+    background-color: #ffffff;
     border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     overflow: hidden;
-}
-
-.event-flyer {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  }
+  
+  
+  .event-card-img img {
     width: 100%;
-    height: auto;
-    max-height: 600px;
-    display: block;
-    border-radius: inherit;
-    object-fit: contain;
-}
-
-.FlyerCard-content-container {
-    margin-top: 14px;
-    width: 100%;
-    padding-left: 16px;
-    padding-top: 8px;
-}
-
-.FlyerCard-content-container p {
-    padding-top: 14px;
-    font-weight: 500;
-}
-
-.eventName {
-    font-weight: bold;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+  }
+  
+  
+  .event-card-text {
+    padding: 16px;
+    color: #333;
+  }
+  
+  .event-title {
     font-size: 1.25rem;
-    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 10px;
+  }
+  
+  .event-card-text p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
     line-height: 1.4;
-    overflow-wrap: break-word;
-}
-
-.FlyerCard-content-container span {
-    font-weight: 350;
-}
-
-.description-content {
+  }
+  
+  .description {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-@media (max-width: 640px) {
-    .FlyerCard {
-        margin: 10px;
-        padding: 20px;
+    font-weight: 400;
+  }
+  
+  @media (max-width: 640px) {
+    .event-card-img img {
+      height: 180px;
     }
-    
-    .FlyerCard-content-container {
-        padding-left: 8px;
+  
+    .event-title {
+      font-size: 1.1rem;
     }
-    
-    .eventName {
-        font-size: 1.125rem;
+  
+    .event-card-text {
+      padding: 12px;
     }
-    
-    .event-flyer {
-        max-height: 400px;
-    }
-}
+  }
+  
