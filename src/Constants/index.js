@@ -1,141 +1,35 @@
-import {
-  //CS Declassified
-  Acing_your_internship,
-  SACS_interest_Meeting,
-  CS_Declassified,
-  projectIncubator,
-  springFullstack,
-  workshop_series,
-  Acing_your_technical_interview,
-  SACS_2nd_Interest_Meeting,
-  Data_Science_Competition_SACS,
-} from "../assets";
+import { KICKOFF_IMAGE } from "../assets";
 
 const events = {
   upcoming: [
     {
-      Name: "Data Science Competition and Workshop",
-      Event_flyer: Data_Science_Competition_SACS,
+      Name: "SACS Game Night Kick-Off",
+      Event_flyer: KICKOFF_IMAGE,
       Description:
-        "Whether you’re looking to sharpen your Python skills, build an impressive résumé, or take home some exciting prizes, we’ve got just the opportunity for you! Join us tomorrow at 1 PM for our Data Science Competition & Workshop.",
-      Date: "Wednesdays & Fridays 1-2pm",
-    },
-
-    {
-      Name: "SACS 2nd Interest Meeting",
-      Event_flyer: SACS_2nd_Interest_Meeting,
-      Description:
-        "Come join for our second interest meeting to learn about who we are and what we do",
-      Date: "Thursday October 29th",
-    },
-    {
-      Name: "Acing Your technical Interview",
-      Event_flyer: Acing_your_technical_interview,
-      Description:
-        "This event is done in collaboration with the Google in residence in order to help students learn data structers and algorithm while also givine them an opportunity to simulate a live interview environment",
-      Date: "Thursdays",
+        "Join us for an exciting game night to kick off the semester! Meet fellow members, enjoy snacks, and play a variety of games including board games, card games, and video games. Whether you're a competitive gamer or just looking to have fun, this event is for you!",
+      Date: "Sept 9th, 2025 @ 5pm",
     },
   ],
   all: [
     {
-      Name: "Acing Your technical Interview",
-      Event_flyer: Acing_your_technical_interview,
+      Name: "SACS Game Night Kick-Off",
+      Event_flyer: KICKOFF_IMAGE,
       Description:
-        "This event is done in collaboration with the Google in residence in order to help students learn data structers and algorithm while also givine them an opportunity to simulate a live interview environment",
-      Date: "Thursdays",
-    },
-    {
-      Name: "Acing_your_internship",
-      Event_flyer: Acing_your_internship,
-      Description:
-        "Event features a series of speakers who successfully completed their internships and received return offers, they share their journey and stories of how they were successful in jobs",
-      Date: "4/13/2023",
-    },
-    {
-      Name: "SACS interest meeting",
-      Event_flyer: SACS_interest_Meeting,
-      Description:
-        "A meeting aimed at providing students that are interested in joining SACS more information about the organization",
-      Date: "9/24/2024",
-    },
-    {
-      Name: "CS Declassified",
-      Event_flyer: CS_Declassified,
-      Description:
-        "An event geared at uncovering and breaking down Computer Science concepts of 112 and 241",
-      Date: "2/13/2024",
-    },
-    {
-      Name: "Acing your internship",
-      Event_flyer: projectIncubator,
-      Description:
-        "Event features a series of speakers who successfully completed their internships and received return offers, they share their journey and stories of how they were successful in jobs",
-      Date: "4/13/2023",
-    },
-    {
-      Name: "Workshop series",
-      Event_flyer: springFullstack,
-      Description:
-        "A event geared atgiving students a intro level introduction to full stack development teaching them skills in both front end and backend using ther PERN stack",
-      Date: "4/13/2023",
-    },
-    {
-      Name: "Workshop series",
-      Event_flyer: workshop_series,
-      Description:
-        "Help student gaving introductions in different coding languages and skill sets in Computer Sience (Exp. python, html, css, flask, C++",
-      Date: "4/13/2023",
+        "Join us for an exciting game night to kick off the semester! Meet fellow members, enjoy snacks, and play a variety of games including board games, card games, and video games. Whether you're a competitive gamer or just looking to have fun, this event is for you!",
+      Date: "Sept 9th, 2025 @ 5pm",
     },
   ],
-  guestspeakers: [
-    {
-      Name: "Acing_your_internship",
-      Event_flyer: Acing_your_internship,
-      Description:
-        "Event features a series of speakers who successfully completed their internships and received return offers, they share their jouney and stories of how they were succeesfully in jobs",
-      Date: "4/13/2023",
-    },
-  ],
+  guestspeakers: [],
   networking: [
     {
-      Name: "SACS interest meeting",
-      Event_flyer: SACS_interest_Meeting,
+      Name: "SACS Game Night Kick-Off",
+      Event_flyer: KICKOFF_IMAGE,
       Description:
-        "A meeting aimed at provide students mthat are interested in joining SACS more informaton about the organizations",
-      Date: "9/24/2024",
+        "Join us for an exciting game night to kick off the semester! Meet fellow members, enjoy snacks, and play a variety of games including board games, card games, and video games. Whether you're a competitive gamer or just looking to have fun, this event is for you!",
+      Date: "Sept 9th, 2025 @ 5pm",
     },
   ],
-  workshops: [
-    {
-      Name: "CS Declassified",
-      Event_flyer: CS_Declassified,
-      Description:
-        "A event Geared at uncovering and breaking down Computer science concepts of 112 and 241",
-      Date: "2/13/2024",
-    },
-    {
-      Name: "Acing your internship",
-      Event_flyer: projectIncubator,
-      Description:
-        "Event features a series of speakers who successfully completed their internships and received return offers, they share their jouney and stories of how they were succeesfully in jobs",
-      Date: "4/13/2023",
-    },
-    {
-      Name: "Workshop series",
-      Event_flyer: springFullstack,
-      Description:
-        "A event geared atgiving students a intro level introduction to full stack development teaching them skills in both front end and backend using ther PERN stack",
-      Date: "4/13/2023",
-    },
-
-    {
-      Name: "Workshop series",
-      Event_flyer: workshop_series,
-      Description:
-        "Help student gaving introductions in different coding languages and skill sets in Computer Sience (Exp. python, html, css, flask, C++",
-      Date: "4/13/2023",
-    },
-  ],
+  workshops: [],
 };
 
 const eboard = [
